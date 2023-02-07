@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -71,16 +70,6 @@ public class Globals : MonoBehaviour
     /// Очки игрока.
     /// </summary>
     public int Score => _score;
-
-    /// <summary>
-    /// Рекорд.
-    /// </summary>
-    private int _record;
-
-    /// <summary>
-    /// Рекорд.
-    /// </summary>
-    public int Record => _record;
 
     /// <summary>
     /// Периоды стрельбы.
@@ -197,9 +186,7 @@ public class Globals : MonoBehaviour
     {
         _currentLevel = 1;
         _coins = 0;
-        if(_record < _score) _record = _score;
         _score= 0;
-        PlayerPrefs.SetInt("Globals:_record", _record);
         _firePeriod = _firePeriods[0];
         _bulletsCount = 1;
         _bulletDamage = 1;
